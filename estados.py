@@ -29,30 +29,9 @@ estados = [
     estado.Estado("Rondônia", ["Acre", "Amazonas", "Mato Grosso"]),
     estado.Estado("Amapá", ["Pará"]),
 ]
-ceara = estados[0]
-piaui = estados[1]
-pernambuco = estados[2]
-paraiba = estados[3]
-rioGrandeNorte = estados[4]
-maranhao = estados[5]
-tocantins = estados[6]
-bahia = estados[7]
-alagoas = estados[8]
-sergipe = estados[9]
-para = estados[10]
-goias = estados[11]
-matoGrosso = estados[12]
-matoGrossoSul = estados[13]
-distritoFederal = estados[14]
-minasGerais = estados[15]
-espiritoSanto = estados[16]
-rioDeJaneiro = estados[17]
-saoPaulo = estados[18]
-parana = estados[19]
-santaCatarina = estados[20]
-rioGrandeSul = estados[21]
-acre = estados[22]
-amazonas = estados[23]
-roraima = estados[24]
-rondonia = estados[25]
-amapa = estados[26]
+arestas = list()
+for estado in estados:
+    for vizinho in estado.vizinhos:
+        if (estado.nome, vizinho) not in arestas and (vizinho, estado.nome) not in arestas:
+            arestas.append((estado.nome, vizinho))
+
