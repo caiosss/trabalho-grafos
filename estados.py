@@ -35,3 +35,5 @@ for estado in estados:
         if (estado.nome, vizinho) not in arestas and (vizinho, estado.nome) not in arestas:
             arestas.append((estado.nome, vizinho))
 
+
+print(arestas)
