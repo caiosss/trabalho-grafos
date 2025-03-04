@@ -32,16 +32,19 @@ class ListaIndexada:
     def plotar_histograma(self):
         contagem_vizinhos = {estado: self.betas.count(estado) for estado in self.alfas.keys()}
 
-        estados = list(contagem_vizinhos.keys())
-        vizinhos = list(contagem_vizinhos.values())
+        graus = list(contagem_vizinhos.values())
+        frequencia_graus = {grau: graus.count(grau) for grau in set(graus)}
+
+        x = list(frequencia_graus.keys())
+        y = list(frequencia_graus.values())
 
         plt.figure(figsize=(12, 6))
-        plt.bar(estados, vizinhos, color="purple")
+        plt.bar(x, y, color="purple")
 
-        plt.xlabel("Estados")
-        plt.ylabel("Quantidade de vizinhos")
-        plt.title("Quantidade de vizinhos por estado")
-        plt.xticks(rotation=90)
+        plt.xlabel("Número de vizinhos (Grau)")
+        plt.ylabel("Quantidade de estados")
+        plt.title("Distribuição do número de vizinhos entre estados")
+        plt.xticks(x)
         plt.grid(axis="y", linestyle="--", linewidth=0.7)
 
         plt.show()

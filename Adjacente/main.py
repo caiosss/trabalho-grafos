@@ -1,4 +1,5 @@
 import estados
+import matplotlib.pyplot as plt
 import numpy as np
 matriz = np.zeros((len(estados.estados), len(estados.estados)), dtype=int)
 
