@@ -6,8 +6,8 @@ estados = [
     estado.Estado("Paraíba", ["Ceará", "Pernambuco", "Rio Grande do Norte"]),
     estado.Estado("Rio Grande do Norte", ["Ceará", "Paraíba"]),
     estado.Estado("Maranhão", ["Piauí", "Tocantins", "Pará"]),
-    estado.Estado("Tocantins", ["Maranhão", "Piauí", "Pará", "Goiás", "Mato Grosso"]),
-    estado.Estado("Bahia", ["Piauí", "Pernambuco", "Minas Gerais", "Espírito Santo", "Sergipe", "Alagoas", "Goiás"]),
+    estado.Estado("Tocantins", ["Maranhão", "Piauí", "Pará", "Goiás", "Mato Grosso", "Bahia"]),
+    estado.Estado("Bahia", ["Piauí", "Pernambuco", "Minas Gerais", "Espírito Santo", "Sergipe", "Alagoas", "Goiás", "Tocantins"]),
     estado.Estado("Alagoas", ["Pernambuco", "Bahia", "Sergipe"]),
     estado.Estado("Sergipe", ["Alagoas", "Bahia"]),
     estado.Estado("Pará", ["Maranhão", "Tocantins", "Amapá", "Amazonas", "Roraima", "Rondônia", "Mato Grosso"]),
@@ -34,6 +34,3 @@ for estado in estados:
     for vizinho in estado.vizinhos:
         if (estado.nome, vizinho) not in arestas and (vizinho, estado.nome) not in arestas:
             arestas.append((estado.nome, vizinho))
-
-
-print(arestas)
