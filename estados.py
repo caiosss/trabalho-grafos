@@ -10,7 +10,7 @@ estados = [
     estado.Estado("Bahia", ["Piauí", "Pernambuco", "Minas Gerais", "Espírito Santo", "Sergipe", "Alagoas", "Goiás", "Tocantins"]),
     estado.Estado("Alagoas", ["Pernambuco", "Bahia", "Sergipe"]),
     estado.Estado("Sergipe", ["Alagoas", "Bahia"]),
-    estado.Estado("Pará", ["Maranhão", "Tocantins", "Amapá", "Amazonas", "Roraima", "Rondônia", "Mato Grosso"]),
+    estado.Estado("Pará", ["Maranhão", "Tocantins", "Amapá", "Amazonas", "Roraima", "Mato Grosso"]),
     estado.Estado("Goiás", ["Tocantins", "Bahia", "Mato Grosso", "Mato Grosso do Sul", "Minas Gerais", "Distrito Federal"]),
     estado.Estado("Mato Grosso", ["Tocantins", "Pará", "Rondônia", "Amazonas", "Mato Grosso do Sul", "Goiás"]),
     estado.Estado("Mato Grosso do Sul", ["Mato Grosso", "Goiás", "Paraná", "São Paulo", "Minas Gerais"]),
